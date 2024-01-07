@@ -1,15 +1,20 @@
 import React from 'react'
-import CarsComponents from './component/cars/cars.component'
-import FlightsComponent from './component/flights/flights.component'
-import HottelComponents from './component/hottel/hottel.component'
+import FormToFromComponent from './component/form-to-from/form-to-from.component'
+import VoucherComponent from './component/voucher/voucher.component'
 
 const HomeComponent = () => {
     return (
-        <div>
-            <CarsComponents />
-            <FlightsComponent />
-            <HottelComponents />
+        <div >
+            <div className='w-[1128px] m-auto'>
+                <div>
+                    <FormToFromComponent />
+                </div>
+                <div>
+                    <VoucherComponent />
+                </div>
+            </div>
         </div>
+
     )
 }
 
