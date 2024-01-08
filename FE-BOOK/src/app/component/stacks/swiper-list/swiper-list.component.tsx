@@ -12,8 +12,6 @@ interface ISwiperList {
 const SwiperListComponent: FC<ISwiperList> = ({ title, children }) => {
     return (
         <>
-
-
             <div css={cssSwiper}>
                 <div className='my-7'>
                     <h2 >{title}</h2>
