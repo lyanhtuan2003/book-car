@@ -5,7 +5,7 @@ import VoucherComponent from './component/voucher/voucher.component'
 const HomeComponent = () => {
     return (
         <div >
-            <div className='w-[1128px] m-auto'>
+            <div className='w-[1128px] m-auto '>
                 <div>
                     <FormToFromComponent />
                 </div>

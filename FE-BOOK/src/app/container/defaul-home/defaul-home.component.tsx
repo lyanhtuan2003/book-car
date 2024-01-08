@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 const DefaulHomeComponent = () => {
     return (
         <>
-            <div className='mt-3'>
+            <div className='mt-[180px]'>
                 <Outlet />
             </div>
         </>
