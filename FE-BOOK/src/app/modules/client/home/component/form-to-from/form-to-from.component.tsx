@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 import ButtonRadiusCompoennt from '~/app/component/parts/button/button.component';
 import { DatePicker } from 'antd';
 import dayjs from 'dayjs';
+import { Link } from 'react-router-dom';
 
 const { RangePicker } = DatePicker;
 const FormToFromComponent = () => {
@@ -80,7 +81,10 @@ const FormToFromComponent = () => {
             </div>
 
             <div className="button-wrapper">
-                <ButtonRadiusCompoennt content='Tìm chuyến xe' />
+                <Link to={"/buy-search-results"}>
+                    <ButtonRadiusCompoennt content='Tìm chuyến xe' />
+                </Link>
+
             </div>
         </div>
     )
