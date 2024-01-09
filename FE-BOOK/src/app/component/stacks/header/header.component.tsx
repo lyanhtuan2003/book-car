@@ -73,7 +73,7 @@ const headerCss = css`
     border-radius: 7px;
     font-weight:600;
     font-size: 1.2rem;
-    color: white;
+    color: var(--color-white);
     transition: all .3s ease;
     &:hover {
         // background-color: #f9a63d;

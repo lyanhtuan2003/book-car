@@ -19,7 +19,7 @@ export default ButtonRadiusCompoennt
 
 const buttonCss = (bgcolor: any) => css`
 button{
-    background-color: ${bgcolor ? '#fff' : '#f2754e'};
+    background-color: ${bgcolor ? '#fff' : 'var(--background-color-orange)'};
     color: ${bgcolor ? '#f2754e' : '#fff'};
     border: 1px solid ${bgcolor ? '#c0c6cc' : '#fff'};
 }
