@@ -29,7 +29,7 @@ const HeaderComponent = () => {
                     </nav>
                     <div className="header__user flex justify-end items-center ">
                         <div>
-                            <div className="btn text-[12px]">Đăng kí/ Đăng nhập</div>
+                            <div className="btn text-[12px]"><Link to={'/login'}>Đăng kí/ Đăng nhập</Link></div>
                         </div>
                     </div>
                 </div>

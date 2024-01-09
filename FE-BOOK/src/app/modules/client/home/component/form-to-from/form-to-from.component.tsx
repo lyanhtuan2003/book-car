@@ -90,10 +90,10 @@ export default FormToFromComponent
 const formCss = css`
 
     background: #fff;
-    border: 1px solid rgba(239,82,34,.6);
+    border: 1px solid var(--color-blue-primary);
     border-radius: 1rem;
     padding: 1.5rem;
-    outline: 8px solid rgba(170,46,8,.1);
+    outline: 8px solid #e0f2fe;
 
     .input-search {
         width:200px;

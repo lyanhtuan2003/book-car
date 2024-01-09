@@ -19,13 +19,14 @@ export default ButtonRadiusCompoennt
 
 const buttonCss = (bgcolor: any) => css`
 button{
-    background-color: ${bgcolor ? '#fff' : 'var(--background-color-orange)'};
-    color: ${bgcolor ? '#f2754e' : '#fff'};
+    background-color: ${bgcolor ? '#fff' : 'var(--color-btn)'};
+    color: ${bgcolor ? 'var(--color-black)' : 'var(--color-white)'};
     border: 1px solid ${bgcolor ? '#c0c6cc' : '#fff'};
+    box-shadow:var(--box-shadow)
 }
 button:hover{
-    background-color: ${bgcolor ? '#f2754e' : '#fff'};
-    color: ${bgcolor ? '#c0c6cc' : '#f2754e'};
+    background-color: ${bgcolor ? '#f2754e' : 'var(--color-blue-hover)'};
+    color: ${bgcolor ? 'var(--color-white)' : ''};
     border: 1px solid ${bgcolor ? '#c0c6cc' : '#c0c6cc'};
 }
 `
