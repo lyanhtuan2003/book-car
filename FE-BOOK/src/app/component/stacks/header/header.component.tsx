@@ -12,27 +12,27 @@ const HeaderComponent = () => {
     return (
         <>
             <header css={headerCss} className=' bg-gradient-to-b from-bgHeader to-primary h-[120px] fixed w-full z-20 top-0 left-0 '>
-            <div className="header-container w-[1128px] m-auto py-6">
-                <div className="header__logo ">
-                    <Link className='flex justify-center items-center' to="/"><img className='w-[70px]' src={logo} alt="BookBus Logo" /> <h3 className='ml-2 font-semibold text-[20px]'>LetGo5</h3></Link>
-                    
-                </div>
-                <nav>
-                <ul className='navMenu__list'>
-                        <li className='navMenu__list-link hover-underline-animation underline-animation--active'><Link to={'/'} >Trang chủ</Link></li>
-                        <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Lịch trinh</Link></li>
-                        <li className='navMenu__list-link hover-underline-animation'><Link to={'/check-ticket'}>Tra cứu vé</Link></li>
-                        <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Hóa đơn</Link></li>
-                        <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Liên hệ</Link></li>
-                        <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Về chúng tôi</Link></li>
-                    </ul>
-                </nav>
-                <div className="header__user flex justify-end items-center ">
-                    <div>
-                        <div className="btn text-[12px]">Đăng kí/ Đăng nhập</div>
+                <div className="header-container w-[1128px] m-auto py-6">
+                    <div className="header__logo ">
+                        <Link className='flex justify-center items-center' to="/"><img className='w-[70px]' src={logo} alt="BookBus Logo" /> <h3 className='ml-2 font-semibold text-[20px]'>LetGo5</h3></Link>
+
+                    </div>
+                    <nav>
+                        <ul className='navMenu__list'>
+                            <li className='navMenu__list-link hover-underline-animation underline-animation--active'><Link to={'/'} >Trang chủ</Link></li>
+                            <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Lịch trinh</Link></li>
+                            <li className='navMenu__list-link hover-underline-animation'><Link to={'/check-ticket'}>Tra cứu vé</Link></li>
+                            <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Hóa đơn</Link></li>
+                            <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Liên hệ</Link></li>
+                            <li className='navMenu__list-link hover-underline-animation'><Link to={'/'}>Về chúng tôi</Link></li>
+                        </ul>
+                    </nav>
+                    <div className="header__user flex justify-end items-center ">
+                        <div>
+                            <div className="btn text-[12px]">Đăng kí/ Đăng nhập</div>
+                        </div>
                     </div>
                 </div>
-            </div>   
             </header>
         </>
     )
@@ -45,6 +45,23 @@ const headerCss = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__socical{
+    display: inline-block;
+    margin-right:100px
+}
+.header__socical-list{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 21px;
+    color: white;
+}
+.navMenu{
+   margin-top:20px;
 }
 .navMenu__list{
     display: flex;
@@ -55,7 +72,7 @@ const headerCss = css`
     padding: 0px 22px ;
     border-radius: 7px;
     font-weight:600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     transition: all .3s ease;
     &:hover {
