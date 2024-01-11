@@ -1,7 +1,7 @@
 import { Controller, useForm } from 'react-hook-form';
 import ButtonRadiusCompoennt from '~/app/component/parts/button/button.component';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { validateRegister } from '../utils/validateForm';
+import { validateRegister } from '../../../utils/validateForm';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import { FaFacebook } from "react-icons/fa";

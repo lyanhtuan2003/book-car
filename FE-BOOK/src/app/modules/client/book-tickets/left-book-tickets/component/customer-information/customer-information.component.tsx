@@ -2,7 +2,7 @@ import React from 'react'
 import { Controller, useForm } from 'react-hook-form';
 import ButtonRadiusCompoennt from '~/app/component/parts/button/button.component';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { validateTicket } from '~/app/modules/client/utils/validateForm';
+import { validateTicket } from '~/app/utils/validateForm';
 import { css } from '@emotion/react';
 
 const CustomerInformation = () => {

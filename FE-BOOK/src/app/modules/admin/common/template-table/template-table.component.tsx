@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
-import { message, Popconfirm, Table } from 'antd';
+import React, { FC, useState } from 'react';
+import { Form, message, Popconfirm, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { MdDeleteForever } from "react-icons/md";
 import { MdOutlineBrowserUpdated } from "react-icons/md";
+import TemplateModal from '../template-model/template-model.component';
 
-const TemplateTable = () => {
+interface ITemplateTable {
+    formEdit?: any
+}
+const TemplateTable: FC<ITemplateTable> = ({ formEdit }) => {
     const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [form] = Form.useForm()
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
 
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     const confirm = (e: any) => {
         console.log(e);
         message.success('Click on Yes');
@@ -59,7 +75,7 @@ const TemplateTable = () => {
     ];
 
     const data: any = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 5; i++) {
         data.push({
             key: i,
             name: `Edward King ${i}`,
@@ -80,7 +96,23 @@ const TemplateTable = () => {
     };
     return (
         <div>
+
+            <div className='pb-4 text-[20px] font-semibold'>
+                Danh sách người dùng
+            </div>
+            <hr className='py-3' />
+            <div className='p-3 bg-success text-white w-[150px] text-center font-medium rounded-md' onClick={showModal}>
+                Thêm mới +
+            </div>
             <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+            <div className=''>
+                <TemplateModal isModalOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}>
+                    <Form form={form} layout='vertical' name='form_in_modal'>
+                        {formEdit}
+                    </Form>
+                </TemplateModal>
+            </div>
+
         </div>
     )
 }
