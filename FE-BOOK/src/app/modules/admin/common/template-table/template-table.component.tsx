@@ -12,7 +12,7 @@ const TemplateTable: FC<ITemplateTable> = ({ formEdit }) => {
     const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [form] = Form.useForm()
-    const showModal = () => {
+    const showModal = (typeAction: string, recordTable?: any) => {
         setIsModalOpen(true);
     };
 
@@ -32,6 +32,7 @@ const TemplateTable: FC<ITemplateTable> = ({ formEdit }) => {
         console.log(e);
         message.error('Click on No');
     };
+
     const columns: ColumnsType<any> = [
         {
             title: 'Name',
@@ -64,7 +65,7 @@ const TemplateTable: FC<ITemplateTable> = ({ formEdit }) => {
                         </Popconfirm>
 
                         <div className='px-6'>
-                            <button className='text-[23px] text-blue-600'>
+                            <button className='text-[23px] text-blue-600' onClick={() => showModal('CHANGE', record)}>
                                 <MdOutlineBrowserUpdated />
                             </button>
                         </div>
@@ -101,7 +102,7 @@ const TemplateTable: FC<ITemplateTable> = ({ formEdit }) => {
                 Danh sách người dùng
             </div>
             <hr className='py-3' />
-            <div className='p-3 bg-success text-white w-[150px] text-center font-medium rounded-md' onClick={showModal}>
+            <div className='p-3 bg-success text-white w-[150px] text-center font-medium rounded-md' onClick={() => showModal('CREATE')}>
                 Thêm mới +
             </div>
             <Table rowSelection={rowSelection} columns={columns} dataSource={data} />

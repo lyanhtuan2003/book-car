@@ -5,6 +5,8 @@ import BooktickitsComponent from "./book-tickets/book-tickets.component";
 import LoginComponent from "./login/login.component";
 import RegisterComponent from "./register/register.component";
 import BusSearchResults from "./bus-search-results/bus-search-results.component";
+import AccountInformation from "./account-information/account-information.component";
+import TicketPurchaseHistory from "./ticket-purchase-history/ticket-purchase-history.component";
 
 export const clientRouter: RouteObject[] = [
     {
@@ -30,5 +32,13 @@ export const clientRouter: RouteObject[] = [
     {
         path: "/buy-search-results",
         element: <BusSearchResults />
+    },
+    {
+        path: "/account-information",
+        element: <AccountInformation />
+    },
+    {
+        path: "/ticket-purchase-history",
+        element: <TicketPurchaseHistory />
     }
 ]
